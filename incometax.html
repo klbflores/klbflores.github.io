@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Income Tax Calculator</title>
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- Fonts CSS-->
+    <link rel="stylesheet" href="css/heading.css">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="icon" type="x-icon" href="assets/img/avataaars.png">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Income Tax</a>
+                <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">CONTACT</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="masthead bg-primary text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+            <!-- Masthead Heading-->
+            <h1 class="masthead-heading mb-0">Income Tax Calculator</h1>
+            <br><br>
+            
+        <div class="container">
+            <div class="top-content">
+                <h2>Tax Bracket Table</h2>
+                <br>
+                <div class="container d-flex align-items-center flex-column">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Over</th>
+                            <th>But not Over</th>
+                            <th>Basic Tax + Rate</th>
+                        </tr>
+                        <tr>
+                            <td>P0</td>
+                            <td>P250,000</td>
+                            <td>0%</td>
+                        </tr>
+                        <tr>
+                            <td>P250,000</td>
+                            <td>P400,000</td>
+                            <td>20% of the excess over P250,000</td>
+                        </tr>
+                        <tr>
+                            <td>P400,000</td>
+                            <td>P800,000</td>
+                            <td>P30,000 + 25% of the excess over P400,000</td>
+                        </tr>
+                        <tr>
+                            <td>P800,000</td>
+                            <td>P2,000,000</td>
+                            <td>P130,000 + 30% of the excess over P800,000</td>
+                        </tr>
+                        <tr>
+                            <td>P2,000,000</td>
+                            <td>P8,000,000</td>
+                            <td>P490,000 + 32% of the excess over P2,000,000</td>
+                        </tr>
+                        <tr>
+                            <td>P8,000,000</td>
+                            <td>-</td>
+                            <td>P2,410,000 + 35% of the excess over P8,000,000</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="container d-flex align-items-center flex-column">
+                    <br>
+                    <h4>Enter Taxable Income:</h4>
+                    <label for="income"></label>
+                    <input type="number" id="income">
+                    <br>
+                    <button onclick="calculateTax()" class="btn btn-secondary">Calculate Tax</button>
+                    <br>
+                    <h4 id="result"></h4>
+                </div>
+            </div>
+        </div>
+            
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="pre-wrap masthead-subheading font-weight-light mb-0">Kauri Lorraine Flores - CS 1B</p>
+        </div>
+    </header>
+        
+    <section class="page-section" id="contact">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <div class="text-center">
+                    <h2 class="page-section-heading text-secondary d-inline-block mb-0">CONTACT</h2>
+                </div>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Contact Section Content-->
+                <div class="row justify-content-center">
+                    <div class="col-lg-4">
+                        <div class="d-flex flex-column align-items-center">
+                            <div class="icon-contact mb-3"><i class="far fa-envelope"></i></div>
+                            <div class="text-muted">Email</div><a class="lead font-weight-bold" href="mailto:klbflores@addu.edu.ph">klbflores@addu.edu.ph</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="mb-4">SUBMISSION</h4>
+                        <p class="pre-wrap lead mb-0">Final Project for ITC
+submitted to Sir John Roy A. Geralde</p>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="mb-4">AROUND THE WEB</h4><a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/kauri.lorraine"><i class="fab fa-fw fa-facebook-f"></i></a>
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4 class="mb-4">SOURCES</h4>
+                        <p class="pre-wrap lead mb-0">Icons from Freepik
+Template from StartBootstrap</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section-->
+        <section class="copyright py-4 text-center text-white">
+            <div class="container"><small class="pre-wrap">Copyright © My Awesome Webpage 2023</small></div>
+        </section>
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+        <div class="scroll-to-top d-lg-none position-fixed"><a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="assets/mail/jqBootstrapValidation.js"></script>
+        <script src="assets/mail/contact_me.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>    
+    
+    <script>
+        function calculateTax() {
+        // Get the taxable income entered by the user
+        var income = parseFloat(document.getElementById('income').value);
+
+        // Define the tax brackets and rates
+        var taxbrackets = [
+            { min: 0, max: 250000, rate: 0.0 },
+            { min: 250000, max: 400000, rate: 0.20 },
+            { min: 400000, max: 800000, rate: 0.25 },
+            { min: 800000, max: 2000000, rate: 0.30 },
+            { min: 2000000, max: 8000000, rate: 0.32 },
+            { min: 8000000, max: Infinity, rate: 0.35 }
+        ];
+
+        // Calculate the income tax
+        var tax = 0;
+            for (var i = 0; i < taxbrackets.length; i++) {
+            var bracket = taxbrackets[i];
+                if (income > bracket.min) {
+            var taxableAmount = Math.min(income, bracket.max) - bracket.min;
+                tax += taxableAmount * bracket.rate;
+                }
+            }
+
+        // Display the result with the ₱ symbol
+            document.getElementById('result').innerHTML = 'Income Tax: &#8369; ' + tax.toFixed(2);
+        }
+    </script>
+</body>
+</html>
